@@ -204,13 +204,13 @@ def Predict():
     correct2=0
     yTest=list(yTest.values.flatten())
     print(yTest)
-
-    #for i in yTest:   
-    #  if(predictKNN(xTrain,yTrain,xTest.iloc[co,:],7)==yTest[co]):
-    #    correct+=1
-    #    print("yes")
-    #  co+=1
-    #accu=(correct/len(yTest)*100)
+    # accuracy for knn
+    for i in yTest:   
+      if(predictKNN(xTrain,yTrain,xTest.iloc[co,:],7)==yTest[co]):
+       correct+=1
+        print("yes")
+      co+=1
+    accu=(correct/len(yTest)*100)
 
 
 
@@ -226,7 +226,7 @@ def Predict():
     print("here")
     plt.scatter(x_train.iloc[:,0],x_train.iloc[:,1],c=labelVal)
     plt.plot(x_test[0],x_test[1],'g*')
-    
+
     plt.xlabel('Insulin')
     plt.ylabel('glucose')
     os.remove('static/inputvscsv.png')
