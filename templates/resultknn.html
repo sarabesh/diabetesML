@@ -3,7 +3,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Knn results</title>
+  <title>results</title>
 
   <!--bootstrap4-->
   <!-- Latest compiled and minified CSS -->
@@ -17,17 +17,27 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
 
+setInterval(function() {
+   var myImageElement = document.getElementById('myImage');
+myImageElement.src = 'static/inputvscsv.png?rand=' + Math.random();
+}, 5000);
+</script>
 
 
 </head>
 
 <body>
-
+<div class="container">
 K-nearest neighbour :Outcome=
 	<h2>{{fin}}</h2>
 K-means :Outcome=	
 	<h2>{{fin2}}</h2>
+Accuracy:
+<h2>{{accu}}</h2></div>
+<p>
+	<img src="static/inputvscsv.png" id="myImage"/>
 </body>
 </html>
 
