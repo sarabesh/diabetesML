@@ -208,7 +208,7 @@ def Predict():
     for i in yTest:   
       if(predictKNN(xTrain,yTrain,xTest.iloc[co,:],7)==yTest[co]):
        correct+=1
-        print("yes")
+       print("yes")
       co+=1
     accu=(correct/len(yTest)*100)
 
